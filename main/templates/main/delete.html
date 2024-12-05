@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% load rest_framework %}
+<html><body>
+{% block content %}
+<div>
+
+<form method="POST" action="">
+    {% csrf_token %}
+    <p>Are you sure?</p>
+    <a href="{{request.META.HTTP_REFERER}}">Go Back</a>
+    <input type="submit" value="Confirm"/>
+</form>
+</div>
+{% endblock content %}
+</body></html>

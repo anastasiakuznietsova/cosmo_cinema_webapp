@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div>
+    <h2>{{movie.title}}</h2>
+    <p>Premier: {{movie.premiere}}</p>
+    <p>Genre: {{movie.moviegenre}}</p>
+    <p>Age restrictions: {{movie.agerestrictions}}</p>
+    <p>Animation format: {{movie.animationformat}}</p>
+    <p>Length: {{movie.mov_length}}</p>
+    <p>Premiere: {{movie.premiere}}</p>
+    <p>Description: {{movie.mvdescription}}</p>
+</div>
+
+{% if user.is_superuser %}
+<h4><a href="{% url 'main:update-movie' movie.pk %}">Update movie information</a></h4>
+<h4><a href="{% url 'main:delete-movie' movie.pk %}">Delete a movie</a></h4>
+{% endif %}
+{% endblock content %}

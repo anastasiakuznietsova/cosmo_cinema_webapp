@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div>
+    <h2>Account information</h2>
+    <div>
+        <p>First name: {{user.first_name}}</p>
+        <p>Last name: {{user.last_name}}</p>
+        <p>Email: {{user.email}}</p>
+        <h4><a href="{% url 'main:user-info-update' %}"> Update account information </a></h4>
+        <h4><a href="{% url 'main:user-delete' %}"> Delete an account</a></h4>
+    </div>
+    <h2>Booked tickets</h2>
+    <div>
+        <div>
+            {% for item in tickets %}
+            <p>Movie: {{ item.showtime.movie.title }}</p>
+            <p>Date: {{ item.showtime.show_date }}</p>
+            <p>Cost: {{ item.showtime.price }}</p>
+            <p>Room: {{ item.showtime.room.room_number }}</p>
+            <p>Seat: {{ item.seat_num }}</p>
+            <p>Runtime: {{ item.showtime.startsAt }} -- {{ item.showtime.endsAt }}</p>
+            <hr>
+            <h4><a href="{% url 'main:cancel-ticket' pk=item.id %}">Cancel booking</a></h4>
+            <hr>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content%}

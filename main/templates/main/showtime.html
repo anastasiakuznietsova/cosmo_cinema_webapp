@@ -1,0 +1,30 @@
+
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div>
+    {% for show in showtime %}
+    <div>
+        {% if show.movie%}
+            <h2>{{show.id}} -- <a href="{% url 'main:movie-details' show.movie.pk %}"> {{show.movie}} </a></h2>
+            <p>Date: {{show.show_date}}</p>
+            <p>Price: {{show.price}}</p>
+            <p>Room: {{show.room}}</p>
+            <p>Starts at: {{show.startsAt}}</p>
+            <p>Ends at: {{show.endsAt}}</p>
+            <h4><a href="{% url 'main:book-a-ticket' %}">Book a ticket</a></h4>
+            {% if user.is_asuperuser %}
+                <h4><a href="{% url 'main:delete-show' show.id%}">Delete a show</a></h4>
+            {% endif %}
+        {% else %}
+            <span>No movie available</span>
+        {% endif %}
+        <hr>
+    </div>
+    {% endfor %}
+</div>
+{% if user.is_superuser %}
+<h2><a href = "{%url 'main:create-showtime'%}">Create a new show</a></h2>
+<h2><a href = "{%url 'main:create-movie'%}">Add a new movie to showtime</a></h2>
+{% endif %}
+{% endblock content %}

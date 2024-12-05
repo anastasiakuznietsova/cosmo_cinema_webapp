@@ -1,0 +1,10 @@
+<h1 style="display:inline;"><span style="margin-left:0.7%;"><a href="{% url 'main:showtime' %}">SHOWTIME</a></span>
+       <span style="margin-left:67%;"><a href="{% url 'main:user-info' %}">ACCOUNT</a></span>
+</h1>
+{% if user.is_authenticated %}
+<h3><span style="margin-left:90%;"><a href="{% url 'main:logout' %}">Sign out</a></span></h3>
+{% else %}
+<h3><span style="margin-left:90%;"><a href="{% url 'main:login' %}">Sign in</a></span></h3>
+{% endif %}
+
+<hr>
