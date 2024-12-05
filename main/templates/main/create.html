@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% load rest_framework %}
+<html><body>
+{% block content %}
+<div>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {% render_form serializer %}
+        <input type="submit" value ="Create">
+    </form>
+</div>
+{% endblock content %}
+</body></html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Showtime</title>
+</head>
+<body>
+    <div>
+        {% for movie in movies %}
+        <div>
+            <h2>{{movie.id}} -- <a href="{% url 'main:movie-details' movie.title %}"> {{movie.title}} </a></h2>
+            <p>Date: {{movie.show_date}}</p>
+            <p>Price: {{show.price}}</p>
+            <p>Room: {{show.room}}</p>
+            <p>Starts at: {{show.startsAt}}</p>
+            <p>Ends at: {{show.endsAt}}</p>
+            <hr>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
