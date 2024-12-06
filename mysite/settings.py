@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure--z5d)z58mji^0ucs-d7608k6q$2-nq*@jx5wv581pm#(u#s+6c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['app-cosmo-cinema-web.azurewebsites.net',
+                 'localhost',
+                 '127.0.0.1']
 
 
 # Application definition
