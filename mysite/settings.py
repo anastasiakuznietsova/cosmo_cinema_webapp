@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure--z5d)z58mji^0ucs-d7608k6q$2-nq*@jx5wv581pm#(u#s+6c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['app-cosmo-cinema-web.azurewebsites.net',
+ALLOWED_HOSTS = ['cosmo-cinema-app.azurewebsites.net',
                  'localhost',
                  '127.0.0.1']
 
@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'app-cosmo-cinema-web-server',
-        'USER': 'zcdmyruxvv',
+        'NAME': 'cosmo-cinema-db',
+        'USER': 'seiiilyw',
         'PASSWORD': '030615Kuza',
-        'HOST':'app-cosmo-cinema-web-server.mysql.database.azure.com',
+        'HOST':'cosmo-cinema-db.mysql.database.azure.com',
         'PORT':'3306',
         'OPTIONS': {
             'ssl': {'ca': 'D:/Univercity/3_sem/Database/DigiCertGlobalRootCA.crt.pem'}
