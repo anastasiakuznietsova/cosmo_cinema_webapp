@@ -86,7 +86,7 @@ DATABASES = {
         'HOST':'app-cosmo-cinema-web-server.mysql.database.azure.com',
         'PORT':'3306',
         'OPTIONS': {
-                'ssl': {'ca': 'D:/Univercity/3_sem/Database/DigiCertGlobalRootCA.crt.pem'}
+                'ssl_disabled': True,
         }
     }
 }
