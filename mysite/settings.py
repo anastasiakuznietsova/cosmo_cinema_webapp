@@ -80,11 +80,14 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'cinema',
-        'USER': 'root',
-        'PASSWORD': '030615kuza',
-        'HOST':'127.0.0.1',
+        'NAME': 'app-cosmo-cinema-web-server',
+        'USER': 'zcdmyruxvv',
+        'PASSWORD': '030615Kuza',
+        'HOST':'app-cosmo-cinema-web-server.mysql.database.azure.com',
         'PORT':'3306',
+        'OPTIONS': {
+                'ssl': {'ca': 'D:/Univercity/3_sem/Database/DigiCertGlobalRootCA.crt.pem'}
+        }
     }
 }
 
