@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'cosmo-cinema-db',
+        'NAME': 'cinema',
         'USER': 'seiiilyw',
         'PASSWORD': '030615Kuza',
         'HOST':'cosmo-cinema-db.mysql.database.azure.com',
