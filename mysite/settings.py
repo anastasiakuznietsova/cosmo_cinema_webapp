@@ -85,9 +85,6 @@ DATABASES = {
         'PASSWORD': '030615Kuza',
         'HOST':'cosmo-cinema-db.mysql.database.azure.com',
         'PORT':'3306',
-        'OPTIONS': {
-            'ssl': {'ca': 'D:/Univercity/3_sem/Database/DigiCertGlobalRootCA.crt.pem'}
-        }
     }
 }
 
